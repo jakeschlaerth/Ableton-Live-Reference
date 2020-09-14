@@ -1,0 +1,51 @@
+.device-list {
+    list-style-type: none;
+    display: grid;
+    justify-content: space-around;
+
+
+    grid-template-areas:
+        'amp auto-filter auto-filter'
+        'auto-pan beat-repeat beat-repeat'
+        'cabinet channel-eq chorus'
+        'compressor compressor compressor' 
+        'corpus corpus corpus'
+        'delay drum-buss dynamic-tube'
+        'echo echo eq-three'
+        'echo echo erosion'
+        'eq-eight eq-eight eq-eight'
+        'filter-delay filter-delay flanger'
+        'frequency-shifter gate gate'
+        'glue-compressor glue-compressor grain-delay'
+        'limiter looper looper'
+        'multiband-dynamics multiband-dynamics overdrive'
+        'pedal phaser phaser'
+        'redux resonators resonators'
+        'reverb reverb reverb'
+        'saturator spectrum tuner'
+        'utility vinyl-distortion tuner'
+        'vocoder vocoder vocoder';
+        
+
+    grid-gap: 30px;
+    margin: 0;
+    padding: 12.5%;
+
+    width: 75%;
+
+    background-image: url("images/push.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.device-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .9);
+    border-radius: 12px;
+}

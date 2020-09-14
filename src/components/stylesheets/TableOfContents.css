@@ -1,0 +1,48 @@
+.table-of-contents-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 50%;
+}
+
+.table-of-contents-container h2 {
+    text-align: center;
+    color: white;
+    font-family: Roboto;
+}
+
+.table-of-contents-section {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(99, 99, 99, .5);
+    border-radius: 12px;
+    margin-bottom: 200px;
+    
+}
+
+.table-of-contents-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 30px 0 30px;
+    /* display: flex; */
+    flex-direction: column;
+    text-align: center;
+
+    /* display: none; */
+}
+
+ul.open {
+    display: flex;
+}
+
+ul.closed {
+    display: none;
+}
+
+.table-of-contents-list li {
+    color: white;
+    font-family: Roboto;
+    line-height: 25px;
+}
