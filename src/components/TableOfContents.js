@@ -18,8 +18,13 @@ class TableOfContents extends React.Component {
     }
 
     expandDeviceList = (e) => {
-        this.setState({ selectedList: e.currentTarget.dataset.id })
-        console.log(this.state)
+        if (e.currentTarget.dataset.id === this.state.selectedList) {
+            this.setState({ selectedList: "0" })
+        }
+        else {
+            this.setState({ selectedList: e.currentTarget.dataset.id })
+            console.log(this.state)
+        }
     }
 
 
@@ -28,7 +33,7 @@ class TableOfContents extends React.Component {
             <div className="table-of-contents-container">
                 <div className="table-of-contents-section">
                     {/* <a className="device-link" href="#device-list" onClick={this.handleClick}> */}
-                    <h2 data-id="1" onClick={this.expandDeviceList}>audio effects ▲ </h2>
+                    <h2 data-id="1" onClick={this.expandDeviceList}>audio effects</h2>
                     {/* </a> */}
                     <ul data-id="1" className={`table-of-contents-list ${this.state.selectedList === "1" ? "open" : "closed"}`}>
                         {deviceArray.map(this.grabNames)}
