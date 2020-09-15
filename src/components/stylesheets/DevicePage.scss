@@ -1,17 +1,7 @@
-.device-page-container {
-    background-attachment: fixed;
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.device-page-header {
+header {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     align-items: center;
-
-    width: 80vw;
-    margin: 0 auto;
 }
 
 .nav {
@@ -19,27 +9,8 @@
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 10px;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $bg-color;
     border-radius: 12px;
-}
-
-.navbar-logo-container {
-    display: flex;
-    flex-direction: column;
-    width:200px;
-
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.navbar-logo-container span {
-    color: white;
-    font-family: Roboto;
-}
-
-.navbar-logo {
-    width:100px;
 }
 
 .hero {
@@ -48,24 +19,31 @@
     justify-items: center;
     align-content: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $bg-color;
     border-radius: 12px;
     margin: auto 20% 5% 20%;
+
+
 }
 
 .main-content {
     display: flex;
+    // flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 10vw 0 10vw;
+
     margin-bottom: 10vh;
+
+
 }
 
 .main-content section {
     min-width: 70%;
     width: calc((48em - 100%) * 1000);
     max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+
+    background-color: $bg-color;
     border-radius: 12px;
 }
 
@@ -73,7 +51,8 @@
     min-width: 25%;
     width: calc((48em - 100%) * 1000);
     max-width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+
+    background-color: $bg-color;
     border-radius: 12px;
 }
 
@@ -86,7 +65,8 @@
 .card {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: rgba(0, 0, 0, 0.9);
+
+    background-color: $bg-color;
     border-radius: 12px;
 }
 
@@ -111,11 +91,23 @@
     justify-self: end;
 }
 
+img {
+    width: 150px;
+}
+
+body {
+    background-image: url("images/amp-hero.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+
+    background-size: cover;
+}
+
 p,
 h1 {
     color: white;
     font-family: Roboto;
-    padding: 2vh 2vw 2vh 2vw;
 }
 
 a {
@@ -123,5 +115,3 @@ a {
     text-decoration: none;
     font-family: Roboto;
 }
-
-/*# sourceMappingURL=styles.css.map */

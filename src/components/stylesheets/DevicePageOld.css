@@ -1,0 +1,81 @@
+.device-page-container {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.page-name-container {
+    margin: 0 auto;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.page-name {
+    color: white;
+}
+
+.hero-image {
+    margin: 0 auto;
+    max-width: 90%;
+
+}
+
+.excerpt-container {
+    background-color: rgba(0, 0, 0, .9);
+    border-radius: 12px;
+    width: 50%;
+}
+
+.excerpt-container p,
+.excerpt-container lh,
+.excerpt-container li,
+.excerpt-container h2 {
+    font-family: Roboto;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.device-page-image-container {
+    float: right;
+}
+
+.excerpt-container lh {
+    line-height: 25px;
+}
+
+.manual-text-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.manual-text-container p {
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.my-thoughts-container {
+    background-color: rgba(0, 0, 0, .9);
+    border-radius: 12px;
+    width: 20%;
+    align-self: center;
+}
+
+.my-thoughts-container p {
+    font-family: Roboto;
+    color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    padding: 20px;
+}
+

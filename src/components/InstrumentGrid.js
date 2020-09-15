@@ -3,7 +3,7 @@ import './stylesheets/InstrumentGrid.css'
 
 // temporary
 import Device from './Device'
-import deviceArray from '../deviceArray'
+import instrumentArray from '../instrumentArray'
 
 class InstrumentGrid extends React.Component {
     renderDeviceList = (device) => {
@@ -20,7 +20,10 @@ class InstrumentGrid extends React.Component {
     render() {
         return (
             <ul className="instrument-list " id="instrument-list">
-                {deviceArray.map(this.renderDeviceList)}
+                <div className="section-header-container" style={{ gridArea: "section-header" }}>
+                    <h2 className="section-header" >instruments</h2>
+                </div>
+                {instrumentArray.map(this.renderDeviceList)}
             </ul>
         )
     }

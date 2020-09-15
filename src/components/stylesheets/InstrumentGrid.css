@@ -5,10 +5,11 @@
 
 
     grid-template-areas:
-        'amp auto-filter auto-filter'
-        'auto-pan beat-repeat beat-repeat'
-        'cabinet channel-eq chorus'
-        'compressor compressor compressor'
+        'section-header'
+        'analog'
+        'collision'
+        'electric';
+        /* 'compressor compressor compressor'
         'corpus corpus corpus'
         'delay drum-buss dynamic-tube'
         'echo echo eq-three'
@@ -24,12 +25,15 @@
         'reverb reverb reverb'
         'saturator spectrum tuner'
         'utility vinyl-distortion tuner'
-        'vocoder vocoder vocoder';
+        'vocoder vocoder vocoder'; */
 
 
     grid-gap: 30px;
     margin: 0;
-    padding: 12.5%;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    padding-top: 0;
+    padding-bottom: 100px;
 
     width: 75%;
 

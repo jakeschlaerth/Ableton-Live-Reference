@@ -5,13 +5,7 @@ import './stylesheets/Device.css';
 class Device extends React.Component {
     goToDevicePage = (e) => {
         e.preventDefault();
-        const currentDevice = {
-            id: this.props.id,
-            name: this.props.name,
-            imageArray: this.props.imageArray,
-            
-        }
-        this.props.history.push({pathname: `/device/${this.props.id}`, state: {currentDevice: currentDevice}});
+        this.props.history.push({pathname: `/device/${this.props.id}`});
         window.scrollTo(0, 0);
         // set state to clicked device
         

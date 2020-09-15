@@ -5,3 +5,13 @@
 .not-found {
     color: black;
 }
+
+.section-header {
+    text-align: center;
+    color: white;
+    font-family: Roboto;
+}
+
+/* img {
+    max-width: 100%;
+} */

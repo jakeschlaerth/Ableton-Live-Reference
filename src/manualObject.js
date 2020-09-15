@@ -504,7 +504,7 @@ const manualExcerpts = {
             less sensitive to very short peaks and compress only when the incoming level has exceeded
             the threshold for a slightly longer time. RMS is closer to how people actually perceive
    loudness and is usually considered more ”musical.” </p>
-   <p>In Expand mode, the Ratio can also be set to values <em>below</em> 1. In this state, Compressor acts as an upward expander, and will <em>increase</em> the gain when signals exceed the threshold. (For more information about the various
+            <p>In Expand mode, the Ratio can also be set to values <em>below</em> 1. In this state, Compressor acts as an upward expander, and will <em>increase</em> the gain when signals exceed the threshold. (For more information about the various
    types of dynamics processing, see the Multiband Dynamics chapter (<a href="#22-26-multiband-dynamics">see 22.26</a>).)</p>
             <p>In addition to these modes, Compressor can be switched between two envelope follower
             shapes that offer further options for how the device measures and responds to signal
@@ -570,8 +570,261 @@ const manualExcerpts = {
             should be able to isolate the kick drum from the rest of the drum mix. Using the sidechain
    listen mode can help you tune the EQ until you find settings you’re happy with.</p>
 
-   
-            
+
+
+        </React.Fragment>,
+
+    "corpus":
+        <React.Fragment>
+            <p>(Note: the Corpus effect is not available in the Intro, Standard and Lite Editions.)</p><p>Corpus is an effect that simulates the acoustic characteristics of seven types of
+            resonant objects. Developed in collaboration with Applied Acoustics Systems, Corpus
+            uses physical modelling technology to provide a wide range of parameters and modulation
+   options.</p><p>The frequency and/or decay rate of the resonance can be MIDI modulated, by enabling
+   the Frequency and/or Off Decay switches in the Sidechain section. Toggle the <span><img src="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/images/manual/en/31364.55c8d70681dc.png" alt="31364.png" /></span> button in Corpus’s title bar to access Sidechain parameters. The MIDI From choosers
+   allow you to select the MIDI track and tapping point from which to receive MIDI note
+   information.</p><p>With Frequency enabled, the tuning of the resonance is determined by the incoming
+            MIDI note. If multiple notes are held simultaneously, the Last/Low switch determines
+            whether the last or the lowest note will have priority. The Transpose and Fine knobs
+            allow for coarse and fine offset of the MIDI-modulated tuning. PB Range sets the range
+   in semitones of pitch bend modulation.</p><p>With Frequency disabled, the Tune control adjusts the base frequency of the resonance
+            in Hertz. The corresponding MIDI note number and fine tuning offset in cents is displayed
+   below.</p><p>Enabling Off Decay causes MIDI note off messages to mute the resonance. The slider
+            below the switch determines the extent to which MIDI note off messages mute the resonance.
+            At 0%, note offs are ignored, and the decay time is based only on the value of the
+            Decay parameter, which is located under the Resonance Type selector. This is similar
+            to how real-world mallet instruments such as a marimbas and glockenspiels behave.
+   At 100%, the resonance is muted immediately at note off, regardless of the Decay time.</p><p>You can hide or show the Sidechain parameters by toggling the  button in Corpus’s title bar. This button will light up if the sidechain is active.</p><p>Corpus contains a Low Frequency Oscillator (LFO) to modulate the resonant frequency.
+   The Amount control sets how much the LFO affects the frequency.</p><p>The Rate control specifies the LFO speed. It can be set in terms of Hertz, or synced
+   to the song tempo, allowing for controlled rhythmic modulation.</p><p>Available LFO waveform shapes are sine (creates smooth modulations with rounded peaks
+            and valleys), square, triangle, sawtooth up, sawtooth down and two types of noise
+   (stepped and smooth).</p><p>Although only one set of LFO controls is visible, there are actually two LFOs, one
+            for each stereo channel. The Phase and Spin controls define the relationship between
+   these two LFOs.</p><p>Phase (available only when the LFOs are synced to song tempo) keeps both LFOs at the
+            same frequency, but can set the two LFO waveforms ”out of phase” with each other,
+            creating stereo movement. Set to ”180”, the LFO outputs are 180 degrees apart, so
+            that when one LFO reaches its peak, the other is at its minimum. With Phase set to
+   ”360” or ”0” the two LFOs run in sync.</p><p>Spin (only available when the LFOs are in Hertz mode) detunes the two LFO speeds relative
+            to each other. Each stereo channel is modulated at a different frequency, as determined
+   by the Spin amount.</p><p>For the noise waveforms, the Phase and Spin controls are not relevant and do not affect
+   the sound.</p><p>Spread detunes the two resonators in relation to each other. Positive values raise
+            the pitch of the left resonator while lowering the pitch of the right one, while negative
+   values do the opposite. At 0%, the resonators are tuned the same.</p><p>The resonance type chooser allows you to select from seven types of physically modeled
+   resonant objects:</p><ul><li><em>Beam</em> simulates the resonance properties of beams of different materials and sizes.</li><li><em>Marimba</em>, a specialized variant of the Beam model, reproduces the characteristic tuning of
+      marimba bar overtones which are produced as a result of the deep arch-cut of the bars.</li><li><em>String</em> simulates the sound produced by strings of different materials and sizes.</li><li><em>Membrane</em> is a model of a rectangular membrane (such as a drum head) with a variable size and
+      construction.</li><li><em>Plate</em> simulates sound production by a rectangular plate (a flat surface) of different materials
+      and sizes.</li><li><em>Pipe</em> simulates a cylindrical tube that is fully open at one end and has a variable opening
+      at the other (adjusted with the Opening parameter.)</li><li><em>Tube</em> simulates a cylindrical tube that is fully open at both ends.</li></ul><p>The resonator quality chooser controls the tradeoff between the sound quality of the
+            resonators and performance by reducing the number of overtones that are calculated.
+            ”Basic” uses minimal CPU resources, while ”Full” creates more sophisticated resonances.
+   This parameter is not used with the Pipe or Tube resonators.</p><p>The Decay knob adjusts the amount of internal damping in the resonator, and thus the
+   decay time.</p><p>The Material knob adjusts the variation of the damping at different frequencies. At
+            lower values, low frequency components decay slower than high frequency components
+            (which simulates objects made of wood, nylon or rubber). At higher values, high frequency
+            components decay slower (which simulates objects made of glass or metal). This parameter
+   is not used with the Pipe or Tube resonators.</p><p>The Radius parameter is only available for the Pipe and Tube resonators. Radius adjusts
+            the radius of the pipe or tube. As the radius increases, the decay time and high frequency
+            sustain both increase. At very large sizes, the fundamental pitch of the resonator
+   also changes.</p><p>The Decay and Material/Radius parameters can also be controlled with the X-Y controller.</p><p>Ratio is only available for the Membrane and Plate resonators, and adjusts the ratio
+   of the object’s size along its x and y axes.</p><p>The Brightness control adjusts the amplitude of various frequency components. At higher
+            values, higher frequencies are louder. This parameter is not used with the Pipe or
+   Tube resonators.</p><p>Inharm. (Inharmonics) adjusts the pitch of the resonator’s harmonics. At negative
+            values, frequencies are compressed, increasing the amount of lower partials. At positive
+            values, frequencies are stretched, increasing the amount of upper partials. This parameter
+   is not used with the Pipe or Tube resonators.</p><p>Opening, which is only available for the Pipe resonator, scales between an open and
+            closed pipe. At 0%, the pipe is fully closed on one side, while at 100% the pipe is
+   open at both ends.</p><p>The Listening L and R controls adjust the location on the left and right resonator
+            where the vibrations are measured. At 0%, the resonance is monitored at the object’s
+            center. Higher values move the listening point closer to the edge. These parameters
+            are not used with the Pipe or Tube resonators, which are always measured in the middle
+   of their permanently open end.</p><p>The Hit knob adjusts the location on the resonator at which the object is struck or
+            otherwise activated. At 0%, the object is hit at its center. Higher values move the
+            activation point closer to the edge. This parameter is not used with the Pipe or Tube
+   resonators.</p><p>The processed signal is fed through a lowpass and highpass filter that can be controlled
+            with an X-Y controller. To define the filter bandwidth, click and drag on the vertical
+            axis. To set the position of the frequency band, click and drag on the horizontal
+   axis. The filter can be toggled on or off with the Filter switch.</p><p>Width adjusts the stereo mix between the left and right resonators. At 0%, both resonators
+            are fed equally to each side, resulting in mono output. At 100%, each resonator is
+   sent exclusively to one channel.</p><p>Bleed mixes a portion of the unprocessed signal with the resonated signal. At higher
+            values, more of the original signal is applied. This is useful for restoring high
+            frequencies, which can often be damped when the tuning or quality are set to low values.
+   This parameter is unavailable with the Pipe or Tube resonators.</p><p>Gain boosts or attenuates the level of the processed signal, while the Dry/Wet control
+            adjusts the balance between the dry input signal and the signal sent to Corpus’s processing.
+            Turning Dry/Wet down will not cut resonances that are currently sounding, but rather
+   stop new input signals from being processed.</p><p>Corpus contains a built-in limiter that automatically activates when the audio level
+   is too high. This is indicated by the LED in the upper-right corner of Corpus’s display.</p>
+        </React.Fragment>,
+
+    "delay":
+        <React.Fragment>
+            <p>The Delay provides two independent delay lines, one for each channel (left and right).
+   </p>
+            <p>To refer delay time to the song tempo, activate the Sync switch, which allows using
+            the Delay Time beat division chooser. The numbered switches represent time delay in
+            16th notes. For example, selecting ”4” delays the signal by four 16th notes, which
+   equals one beat (a quarter note) of delay.</p>
+            <p>If the Sync switch is off, the delay time reverts to milliseconds. In this case, to
+   edit the delay time, click and drag up the Delay Time knob.</p><p>With Stereo Link engaged, the left channel’s settings are applied to the right channel,
+            and changing either channel’s Sync switch or Delay Time settings will apply the changes
+   to both sides.</p><p>The Feedback parameter defines how much of each channel’s output signal feeds back
+            into the delay lines’ inputs. Internally, they are two independent feedback loops,
+            so a signal on the left channel does not feed back into the right channel and vice
+   versa.</p><p>The button will cause the delay to endlessly cycle the audio which is in its buffer at
+   the moment that the button is pressed, ignoring any new input until Freeze is disabled.</p><p>The delay is preceded by a bandpass filter that can be toggled on and off with a switch,
+            and controlled with an X-Y controller. To define the filter bandwidth, click and drag
+            on the vertical axis. To set the position of the frequency band, click and drag on
+   the horizontal axis.</p>
+            <p>Filter frequency and delay time can be modulated by an LFO, making it possible to
+            achieve a range of sounds from light chorus-like effects through to heavy contorted
+            noise. The Rate slider sets the frequency of the modulation oscillator in Hertz. The
+            Filter slider adjusts the amount of modulation that is applied to the filter, and
+   the Time slider adjusts the amount of modulation that is applied to the delay time.</p>
+            <p>Changing the delay time while Delay is processing audio can cause abrupt changes in
+   the sound of the delayed signal. You can choose between three delay transition modes:</p>
+            <ul><li>Repitch causes a pitch variation when changing the delay time, similar to the behavior
+      of old tape delay units. Repitch mode is the default option.</li><li>Fade creates a crossfade between the old and new delay times. This sounds a bit similar
+      to time stretching if the delay time is gradually changed. </li><li>Jump immediately jumps to the new delay time. Note that this will cause an audible
+      click if the delay time is changed while delays are sounding. </li></ul>
+            <p>Tip: try using the Time slider to explore the effect of time modulation on the different
+   transition modes.</p>
+            <p>When the Ping Pong switch is activated, the signal jumps from the left to the right
+   output.</p>
+            <p>The Dry/Wet control adjusts the balance between the processed and dry signals. Set
+            it to 100 percent when using Delay in a return track. The Dry/Wet parameter’s context
+            menu lets you toggle Equal-Loudness. When enabled, a 50/50 mix will sound equally
+   loud for most signals.</p>
+            <p>Sets saved in versions of Live older than Live 10.1 that used Simple Delay or Ping
+            Pong Delay devices will show an Upgrade button in the title bar of each instance of
+            Delay when loading the Set. Upgrading the device will preserve the previously used
+            device’s free delay time range, and will only affect the sound of the Set or preset
+            if the free delay time parameter was either mapped to a Macro Control or to a Max
+   for Live device.</p>
+            <h3 id="22-10-1-delay-tips"><span class="section-number">22.10.1</span> Delay Tips</h3>
+            <h4 id="glitch-effect">Glitch Effect</h4>
+            <p>Enable the Stereo Link switch and set the delay time to around 400-500ms. Dial the
+            Feedback to 80% or above. Disable the bandpass filter, adjust the Filter slider to
+            0%, and set the Time slider to 100%. Select the Fade transition mode and make sure
+   Ping Pong is disabled. Set the Dry/Wet control to 80% or above. </p>
+            <h4 id="chorus-effect">Chorus Effect</h4>
+            <p>Disable the Stereo Link switch, set the left channel’s delay time to 12ms, and adjust
+            the right channel’s delay time to 17ms. Dial the Feedback to 60%. Enable the bandpass
+            filter, set the Filter Frequency to 750 Hz, and adjust the Width slider to 6.5. Set
+            the Rate slider to 5 Hz, bring the Filter slider to 10%, and dial the Time slider
+   to 12%. Select the Repitch transition mode and enable the Ping Pong switch.</p>
+        </React.Fragment>,
+    "drum-buss":
+        <React.Fragment>
+            <p>(Note: the Drum Buss effect is not available in the Intro and Lite Editions.)</p><p>Drum Buss is an analog-style drum processor that was designed to add body and character
+   to a group of drums, while gluing them together in a tight mix. </p><p>The Trim slider lets you reduce the input level before any processing is applied to
+   the signal.</p><p>The Comp toggle applies a fixed compressor to the input signal before it is processed
+            by the distortion. The compressor is optimized for balancing out groups of drums,
+            with fast attack, medium release and moderate ratio settings, as well as ample makeup
+   gain. </p><p>There are three types of distortion which can be applied to the input signal. Each
+            distortion type adds an increasing degree of distortion, while lending its own character
+   to the overall sound:</p><ul><li>Soft: waveshaping distortion</li><li>Medium: limiting distortion </li><li>Hard: clipping distortion with bass boost</li></ul><p>For more intensity, it is possible to drive the input prior to distorting it. The
+   Drive control lets you determine how much drive is applied to the input signal. </p><p>Drum Buss combines commonly-used drum processing tools for shaping the mid-high range
+   and filling out the low end, which we will look at in the following sections.</p><h4 id="mid-high-frequency-shaping">Mid-High Frequency Shaping</h4><p>The mid-high frequency shaping tools are designed to add clarity and presence to drums
+   such as snares and hi-hats.</p><p>Crunch adjusts the amount of sine-shaped distortion applied to mid-high frequencies.
+   </p><p>The Damp control is a low-pass filter, which removes unwanted high frequencies that
+   can occur after adding distortion.</p><p>The Transients knob emphasizes or de-emphasizes the transients of frequencies above
+            100 Hz. Positive values add attack and increase sustain, resulting in a full, “punchy”
+            sound. Negative values also add attack, but decrease sustain. This tightens up the
+   drums, giving them a sharper, more crisp sound with less room and rattle. </p><p>Low-End Enhancement</p><p>Drum Buss’s low-end enhancement is made up of two tools: a resonant filter, which
+            dramatically boosts bass frequencies, as well as a Decay control, which allows you
+            to adjust the decay rate of both the incoming audio and the signal processed by the
+   resonant filter. These tools help you to fill out the low-end of your drums. </p><p>The Boom knob adjusts the amount of low-end enhancement that the resonant filter produces.
+            The Bass Meter lets you see the Boom’s effect on the signal, which can be particularly
+   useful if you can’t hear it.</p><p>The Freq knob adjusts the frequency of the low-end enhancer. Force To Note lets you
+            tune the low-end enhancer by setting its frequency to the value of the nearest MIDI
+   note.</p><p>The Decay control adjusts the decay rate of the low frequencies. When the Boom amount
+            is set to 0%, the decay affects the incoming (post-drive and distortion) signal only.
+            When the “Boom Level” is adjusted above 0%, the decay affects both the incoming and
+   processed signals. </p><p>To solo the result of the low-frequency enhancer, enable Boom Audition via the headphone
+   icon. </p><h4 id="output">Output</h4><p>The Dry/Wet control adjusts the balance between the processed and dry signals. </p><p>The Output Gain slider sets the amount of gain applied to the processed signal.</p>
+        </React.Fragment>,
+
+    "dynamic-tube":
+        <React.Fragment>
+            <p>(Note: the Dynamic Tube effect is not available in the Intro and Lite Editions.)</p><p>The Dynamic Tube effect infuses sounds with the peculiarities of tube saturation.
+            An integrated envelope follower generates dynamic tonal variations related to the
+   level of the input signal.</p><p>Three tube models, A, B and C, provide a range of distortion characteristics known
+            from real amplifier tubes. Tube A does not produce distortions if Bias is set low,
+            but will kick in whenever the input signal exceeds a certain threshold, creating bright
+            harmonics. Tube C is a very poor tube amp that produces distortions all the time.
+   The qualities of Tube B lie somewhere between these two extremes.</p><p>The Tone control sets the spectral distribution of the distortions, directing them
+   into the higher registers, or through the midrange and deeper.</p><p>The Drive control determines how much signal reaches the tube; greater Drive yields
+            a dirtier output. The intensity of the tube is controlled by the Bias dial, which
+            pushes the signal into the celebrated realms of nonlinear distortion. With very high
+   amounts of Bias, the signal will really start to break apart.</p><p>The Bias parameter can be positively or negatively modulated by an envelope follower,
+            which is controlled with the Envelope knob. The more deeply the envelope is applied,
+            the more the Bias point will be influenced by the level of the input signal. Negative
+            Envelope values create expansion effects by reducing distortion on loud signals, while
+   positive values will make loud sounds dirtier.</p><p>Attack and Release are envelope characteristics that define how quickly the envelope
+            reacts to volume changes in the input signal. Together, they shape the dynamic nature
+   of the distortions. Note that if Envelope is set to zero, they will have no effect.</p><p>Cut or boost the device’s final signal level with the Output dial.</p><p>Aliasing can be reduced by enabling Hi-Quality mode, which can be accessed via the
+   <kbd>right-click</kbd>(PC) / <kbd>CTRL</kbd>-<kbd>click</kbd>(Mac) context menu. This improves the sound quality, particularly with high frequency
+   signals, but there is a slight increase in CPU usage.</p>
+        </React.Fragment>,
+
+        "echo" : 
+        <React.Fragment>
+                <p>Echo is a modulation delay effect that lets you set the delay time on two independent
+   delay lines, while giving you control over envelope and filter modulation. </p><p>The Channel Mode buttons let you choose between three different modes: Stereo, Ping
+   Pong and Mid/Side.</p><p>The Left and Right delay line controls let you choose the delay time, which can be
+                set in beat divisions or milliseconds, depending on the state of the Sync switch.
+                Note that when the Mid/Side channel mode is selected, the Left and Right delay line
+   controls are replaced with Mid and Side knobs. </p><p>You can use the Sync Mode choosers to select one of the following beat-synced modes:
+                Notes, Triplet, Dotted and 16th. Note that when switching between Sync Modes, the
+   resulting changes are only audible while the Sync switch is set to Sync.</p><p>When Stereo Link is engaged, changing either channel’s delay line control, Sync switch
+   or Sync Mode settings will apply the changes to both sides.</p><p>Changing the Delay Offset sliders shortens or extends the delay time by fractional
+                amounts, thus producing the ”swing” type of timing effect found in drum machines.
+                Note that when Stereo Link is enabled, the Delay Offset can still be adjusted individually
+   for the two delay lines.</p><p>The Input knob sets the amount of gain applied to the dry signal. To apply distortion
+   to the dry signal, press the “D” button.</p><p>The Feedback parameter defines how much of each channel’s output signal feeds back
+                into the delay lines’ inputs. The “Ø“ button inverts each channel’s output signal
+   before adding it back to their inputs.</p><h3 id="22-13-1-echo-tab"><span class="section-number">22.13.1</span> Echo Tab</h3><p>The Echo tab provides a visualization and control of the delay lines and filter parameters.</p><figure class="image-container"><img src="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/images/manual/en/EchoTunnel_opt.4dbc140c1016.png" alt="EchoTunnel.png"/><figcaption>Echo’s Tunnel Visualization.</figcaption></figure><p>The Echo Tunnel’s circular lines represent the individual repeats, progressing from
+                the outside of the tunnel to its center. The distance between the lines indicates
+                the time between the repeats, and the white dots in the middle form a fixed 1/8th
+                note grid for reference. You can adjust the delay times for each delay line by clicking
+   and dragging in the display.</p><figure class="image-container"><img src="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/images/manual/en/EchoFilter_opt.96bb3c217e82.png" alt="EchoFilter.png" /><figcaption>Echo’s Filter.</figcaption></figure><p>The Filter toggle enables a high-pass and low-pass filter. The HP slider adjusts the
+                    cutoff frequency of the high-pass filter and the adjacent Res slider adjusts the high-pass
+                    filter’s resonance. The LP slider adjusts the cutoff frequency of the low-pass filter,
+                    and you can use the Res slider on the right side to adjust the low-pass filter’s resonance.
+   </p><p>The Filter Display makes it possible to visualize the filter curves. To show or hide
+                        the Filter Display, use the triangular toggle button. You can also adjust the filter
+   parameters by clicking and dragging either of the filter dots in the Filter Display.</p><h3 id="22-13-2-modulation-tab"><span class="section-number">22.13.2</span> Modulation Tab</h3><p>Echo’s Modulation tab contains an LFO that modulates filter frequency and delay time,
+   and an envelope follower that can be blended with the LFO. </p><figure class="image-container"><img src="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/images/manual/en/EchoModulationTab_opt.aca416f05fb0.png" alt="EchoModulationTab.png" /><figcaption>Echo’s Character Tab.</figcaption></figure><p>Echo’s Modulation Tab.</p><p>You can choose from one of six different modulation waveforms including sine, triangle,
+                        sawtooth up, sawtooth down, square, and noise. The selected waveform will appear in
+   the display, which you can drag to adjust the modulation frequency. </p><p>When Sync is enabled, modulation is synchronized to the song tempo. You can use the
+                            Rate slider to set the frequency of the modulation oscillator in beat divisions. When
+                            Sync is disabled, you can use the Freq slider to adjust frequency of the modulation
+   oscillator in Hertz. </p><p>Phase adjusts the amount of offset between the waveforms for the left and right channel.
+   At 180°, the channels will be perfectly out of phase.</p><p>Mod Delay adjusts the amount of modulation that is applied to the delay time. Modulation
+                            x4 scales the delay time modulation depth by a factor of four. With short delay times,
+   this produces deep flanging sounds.</p><p>Mod Filter adjusts the amount of modulation that is applied to the filter.</p><p>Env Mix blends between the modulation oscillator and an envelope follower. At 100%,
+                            only the envelope’s modulation will be heard. At 0%, only the LFO’s modulation will
+   be heard.</p><h3 id="22-13-3-character-tab"><span class="section-number">22.13.3</span> Character Tab</h3><p>Echo’s Character tab contains parameters that control dynamics and add imperfections
+   to your sound. </p><figure class="image-container"><img src="https://cdn-resources.ableton.com/80bA26cPQ1hEJDFjpUKntxfqdmG3ZykO/static/images/manual/en/EchoCharacterTab_opt.f1dfb175a8eb.png" alt="EchoCharacterTab.png" /><figcaption>Echo’s Character Tab.</figcaption></figure><p>Gate enables a gate at Echo’s input. It mutes the signal components below its threshold.
+                            Threshold sets the threshold level that incoming audio signals must exceed in order
+                            to open the gate. Release sets how long it takes for the gate to close after the signal
+   has dropped below the threshold.</p><p>When Ducking is enabled, the wet signal is proportionally reduced as long as there
+                                is an input signal. Ducking begins to affect the output signal when the input level
+                                exceeds the set Threshold. Release sets how long it takes for ducking to stop after
+   the input signal drops below the threshold.</p><p>When enabled, Noise introduces noise to simulate the character of vintage equipment.
+                                You can adjust the Amount of noise added to the signal, and Morph between different
+   types of noise.</p><p>When enabled, Wobble adds an irregular modulation of the delay time to simulate tape
+                                delays. You can adjust the Amount of wobble added to the signal, and Morph between
+   different types of wobble modulation.</p><p>Repitch causes a pitch variation when changing the delay time, similar to the behavior
+                                of hardware delay units. When Repitch is disabled, changing the delay time creates
+   a crossfade between the old and new delay times.</p><p>Note that in order to save CPU, the Echo device turns itself off at least eight seconds
+                                after its input stops producing sound. However, Echo will not switch off if both the
+   Noise and Gate parameters are enabled.</p><h3 id="22-13-4-global-controls"><span class="section-number">22.13.4</span> Global Controls</h3><p>The Reverb knob sets the amount of reverb added, and you use the Reverb Location chooser
+                                to set where the reverb is added in the processing chain: pre delay, post delay, or
+                                within the feedback loop. Use the Decay slider to lengthen or shorten the reverb tail.
+   </p><p>The Stereo control sets the stereo width of the wet signal. 0% yields a mono signal
+   whereas values above 100% create a widened stereo panorama.</p><p>The Output sets the amount of gain applied to the processed signal. The Dry/Wet control
+                                adjusts the balance between the processed and dry signals. Set it to 100 percent when
+                                using Echo in a return track. The Dry/Wet parameter’s context menu lets you toggle
+   Equal-Loudness. When enabled, a 50/50 mix will sound equally loud for most signals.</p>
         </React.Fragment>
 
 

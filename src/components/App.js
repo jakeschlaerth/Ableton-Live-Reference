@@ -5,9 +5,9 @@ import InstrumentGrid from './InstrumentGrid'
 import './App.css';
 
 class App extends React.Component {
-    state = {
-        selectedDevice : {}
-    }
+    // state = {
+    //     selectedDevice : {}
+    // }
     render() {
         return (
             <React.Fragment>

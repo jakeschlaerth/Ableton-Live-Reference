@@ -5,33 +5,35 @@
 
 
     grid-template-areas:
-        'amp auto-filter auto-filter'
-        'auto-pan beat-repeat beat-repeat'
-        'cabinet channel-eq chorus'
-        'compressor compressor compressor' 
-        'corpus corpus corpus'
-        'delay drum-buss dynamic-tube'
-        'echo echo eq-three'
-        'echo echo erosion'
-        'eq-eight eq-eight eq-eight'
-        'filter-delay filter-delay flanger'
-        'frequency-shifter gate gate'
-        'glue-compressor glue-compressor grain-delay'
-        'limiter looper looper'
-        'multiband-dynamics multiband-dynamics overdrive'
-        'pedal phaser phaser'
-        'redux resonators resonators'
-        'reverb reverb reverb'
-        'saturator spectrum tuner'
-        'utility vinyl-distortion tuner'
-        'vocoder vocoder vocoder';
+        '. . section-header section-header . .'
+        'amp amp auto-filter auto-filter auto-filter auto-filter'
+        'auto-pan auto-pan beat-repeat beat-repeat beat-repeat beat-repeat'
+        'cabinet cabinet channel-eq channel-eq chorus chorus'
+        'compressor compressor compressor compressor delay delay'
+        'corpus corpus corpus corpus corpus corpus'
+        'drum-buss drum-buss drum-buss drum-buss dynamic-tube dynamic-tube'
+        'echo echo echo echo echo echo'
+        'eq-three eq-three eq-three erosion erosion erosion'
+        'eq-eight eq-eight eq-eight eq-eight eq-eight eq-eight'
+        'filter-delay filter-delay filter-delay filter-delay flanger flanger'
+        'frequency-shifter frequency-shifter gate gate gate gate'
+        'glue-compressor glue-compressor glue-compressor grain-delay grain-delay grain-delay'
+        'limiter limiter looper looper looper looper'
+        'multiband-dynamics multiband-dynamics multiband-dynamics multiband-dynamics multiband-dynamics overdrive'
+        'pedal pedal phaser phaser phaser phaser'
+        'redux redux resonators resonators resonators resonators'
+        'reverb reverb reverb saturator saturator saturator'
+        'spectrum spectrum spectrum spectrum tuner tuner'
+        'utility utility vinyl-distortion vinyl-distortion tuner tuner'
+        'vocoder vocoder vocoder vocoder vocoder vocoder';
         
 
     grid-gap: 30px;
     margin: 0;
-    padding: 12.5%;
-
-    width: 75%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 100px;
+    width: 80%;
 
     background-image: url("images/push.jpg");
     background-attachment: fixed;
@@ -48,4 +50,11 @@
     text-align: center;
     background-color: rgba(0, 0, 0, .9);
     border-radius: 12px;
+}
+
+.section-header-container {
+    background-color: rgba(0, 0, 0, .9);
+    border-radius: 12px;
+    width: 200px;
+    margin: 50px auto 0;
 }
