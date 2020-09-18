@@ -5,7 +5,10 @@ class DevicePageHeader extends React.Component {
         return (
             <header className="device-page-header">
                 <div className="navbar-logo-container">
-                    <a href="https://www.ableton.com/en/manual/welcome-to-live/">
+                    <a
+                        href={this.props.currentDevice.manualUrl}
+                        target="_blank"
+                        rel="noopener noreferrer">
                         <img src="/images/logo.jpg" className="navbar-logo" alt="ableton logo" />
                     </a>
                     <span>rtfm on {this.props.currentDevice.name.toLowerCase()}</span>
