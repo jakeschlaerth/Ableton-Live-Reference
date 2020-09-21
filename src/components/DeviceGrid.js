@@ -6,15 +6,17 @@ import './stylesheets/DeviceGrid.css'
 
 class DeviceGrid extends React.Component {
     renderDeviceList = (device) => {
-        return (
-            <Device
-                key={device.key}
-                id={device.key}
-                name={device.name}
-                blurb={device.blurb}
-                imageArray={device.imageArray}
-            />
-        )
+        if (device.type === "aud") {
+            return (
+                <Device
+                    key={device.key}
+                    id={device.key}
+                    name={device.name}
+                    blurb={device.blurb}
+                    imageArray={device.imageArray}
+                />
+            )
+        }
     }
     render() {
         return (

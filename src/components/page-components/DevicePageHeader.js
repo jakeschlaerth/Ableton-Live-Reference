@@ -17,9 +17,9 @@ class DevicePageHeader extends React.Component {
                 <nav>
                     <ul className="nav">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/">Placeholder</a></li>
-                        <li><a href="/">Contact</a></li>
+                        <li><a href="https://www.jakeschlaerth.com">About</a></li>
+                        <li><a href="https://www.ableton.com/en/manual/welcome-to-live/">Manual</a></li>
+                        <li><a href="mailto: jakeschlaerth1999@gmail.com">Email</a></li>
                     </ul>
                 </nav>
             </header>

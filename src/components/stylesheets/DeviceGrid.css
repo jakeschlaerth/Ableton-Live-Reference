@@ -21,11 +21,11 @@
         'limiter limiter looper looper looper looper'
         'multiband-dynamics multiband-dynamics multiband-dynamics multiband-dynamics multiband-dynamics overdrive'
         'pedal pedal phaser phaser phaser phaser'
-        'redux redux resonators resonators resonators resonators'
+        'redux resonators resonators resonators resonators resonators'
         'reverb reverb reverb saturator saturator saturator'
-        'spectrum spectrum spectrum spectrum tuner tuner'
-        'utility utility vinyl-distortion vinyl-distortion tuner tuner'
-        'vocoder vocoder vocoder vocoder vocoder vocoder';
+        'spectrum spectrum spectrum tuner tuner tuner'
+        'utility  vocoder vocoder vocoder vocoder vinyl-distortion ';
+        /* 'vocoder vocoder vocoder vocoder vocoder vocoder'; */
         
 
     grid-gap: 30px;
