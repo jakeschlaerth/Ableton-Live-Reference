@@ -31,6 +31,10 @@ class DevicePage extends React.Component {
                 <DevicePageHero currentDevice={this.currentDevice} />
                 <DevicePageMainContent currentDevice={this.currentDevice} />
 
+                <div className="related-devices-header-container">
+                    <h2 className="related-devices-header">Related Devices</h2>
+                </div>
+                
                 <section className="card-list">
                     {this.currentDevice.relatedDevices.map(this.renderRelatedDevices)}
                 </section>

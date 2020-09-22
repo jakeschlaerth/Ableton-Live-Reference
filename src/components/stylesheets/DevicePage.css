@@ -97,8 +97,9 @@
 }
 
 .main-content section {
-    /* display:flex; */
+    display:flex;
     flex-direction: column;
+    justify-content: center;
     min-width: 60%;
     width: calc((48em - 100%) * 1000);
     max-width: 100%;
@@ -106,19 +107,24 @@
     border-radius: 12px;
 }
 
+.main-content section iframe{
+     margin: 20px auto;
+}
 
 .main-content aside {
     display: flex;
     flex-direction: column;
 }
-.audio-player {
-    margin: 10px auto;
-}
+
 
 /* .main-content section p {
     width: 75%;
     margin: 0 auto;
 } */
+
+.audio {
+    margin: 20px auto;
+}
 
 .main-content-image {
     border-radius: 12px;
@@ -162,6 +168,18 @@
     max-width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 12px;
+}
+
+.related-devices-header-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.related-devices-header {
+    padding: 10px 0 10px 0;
 }
 
 .card-list {

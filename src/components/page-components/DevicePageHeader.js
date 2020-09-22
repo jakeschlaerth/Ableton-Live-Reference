@@ -11,7 +11,7 @@ class DevicePageHeader extends React.Component {
                         rel="noopener noreferrer">
                         <img src="/images/logo.jpg" className="navbar-logo" alt="ableton logo" />
                     </a>
-                    <span>rtfm on {this.props.currentDevice.name.toLowerCase()}</span>
+                    <span> reference: {this.props.currentDevice.name.toLowerCase()}</span>
 
                 </div>
                 <nav>
