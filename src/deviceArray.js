@@ -502,7 +502,7 @@ const deviceArray = [
         name: "Glue Compressor",
         blurb: "The Glue Compressor is an analog-modeled compressor created in collaboration with Cytomic, and is based on the classic bus compressor from a famous 80’s mixing console. Like Live’s original Compressor, the Glue Compressor can be used for basic dynamics control of individual tracks, but is mainly designed for use on the Master track or a Group Track to “glue” multiple sources together into a cohesive sounding mix.",
         imageArray: ["images/glue-compressor.png"],
-        relatedDevices: [ "utility", "saturator"],
+        relatedDevices: ["utility", "saturator"],
         manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-22-glue-compressor",
         mainContent:
             <React.Fragment>
@@ -553,10 +553,36 @@ const deviceArray = [
         name: "Limiter",
         blurb: "The Limiter effect is a mastering-quality dynamic range processor that ensures that the output does not exceed a specified level. Limiter is ideal for use in the Master track, to prevent clipping. A limiter is essentially a compressor with an infinite ratio.",
         imageArray: ["images/limiter.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
+        relatedDevices: ["eq-eight", "eq-three", "utility"],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-24-limiter",
         mainContent:
             <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PnqzIg-wcWk" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    Ableton's Limiter is one of the stock audio effects included in Live based on a mastering-quality dynamic range processor that makes sure its output never exceeds a specified level. In other words, Live's Limiter acts as a compressor with an infinite ratio, never letting input signals cross a specified level.
+                </p>
+            </React.Fragment>,
+        asideContent:
+            <React.Fragment>
+                <p>
+                    No need for an audio example on this one.
+                </p>
+            </React.Fragment>,
+    },
+    {
+        type: "aud",
+        key: "looper",
+        name: "Looper",
+        blurb: "Looper is an audio effect based on classic real-time looping devices. It allows you to record and loop audio, creating endless overdubs that are synced to your Set. If the Set is not playing, Looper can analyze incoming audio and set Live’s tempo to match it. You can also predefine a loop length before recording and Live’s tempo will adjust so that your loop fits into the specified number of bars. Furthermore, audio can be imported to Looper to create a background for newly overdubbed material, or exported from Looper as a new clip.",
+        imageArray: ["images/looper.png"],
+        relatedDevices: ["beat-repeat", "delay",],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-25-looper",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PtX9QFltk9Q" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    Looper could easily be its own program. I don't think you can use it unless you're some sort of genuis. I tend to use session clips to loop, but there's some real horsepower under Looper's hood.
+                </p>
 
             </React.Fragment>,
         asideContent:
@@ -566,25 +592,23 @@ const deviceArray = [
     },
     {
         type: "aud",
-        key: "looper",
-        name: "Looper",
-        blurb: "Looper is an audio effect based on classic real-time looping devices. It allows you to record and loop audio, creating endless overdubs that are synced to your Set. If the Set is not playing, Looper can analyze incoming audio and set Live’s tempo to match it. You can also predefine a loop length before recording and Live’s tempo will adjust so that your loop fits into the specified number of bars. Furthermore, audio can be imported to Looper to create a background for newly overdubbed material, or exported from Looper as a new clip.",
-        imageArray: ["images/looper.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
-    },
-    {
-        type: "aud",
         key: "multiband-dynamics",
         name: "Multiband Dynamics",
         blurb: "The Multiband Dynamics device is a flexible tool for modifying the dynamic range of audio material. Designed primarily as a mastering processor, Multiband Dynamics allows for upward and downward compression and expansion of up to three independent frequency bands, with adjustable crossover points and envelope controls for each band. Each frequency range has both an upper and lower threshold, allowing for two types of dynamics processing to be used simultaneously per band.",
         imageArray: ["images/multiband-dynamics.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        relatedDevices: ["compressor", "eq-eight",],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-26-multiband-dynamics",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/W2CLvI23-Rg" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    Another one of these 5head devices that you have to be a genius to use, multiband dynamics is an extremely powerful mastering tool.
+                </p>
+            </React.Fragment>,
+        asideContent:
+            <React.Fragment>
+
+            </React.Fragment>,
     },
     {
         type: "aud",
@@ -592,10 +616,24 @@ const deviceArray = [
         name: "Overdrive",
         blurb: "Overdrive is a distortion effect that pays homage to some classic pedal devices commonly used by guitarists. Unlike many distortion units, it can be driven extremely hard without sacrificing dynamic range.",
         imageArray: ["images/overdrive.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        relatedDevices: ["pedal", "redux", "frequency-shifter"],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-27-overdrive",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LW6QNXuTsoc" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    Overdrive is such a wonderful little workhorse for waveshaping. Pedal may have taken the crown in Live 10, but this simple little device still lives in just about every Ableton project I make.
+                </p>
+            </React.Fragment>,
+        asideContent:
+            <React.Fragment>
+                <p>
+                    Chord progression the first time through is clean. Listen to that good good fuzz.
+            </p>
+                <audio controls className="audio">
+                    <source src="/audio/overdrive.ogg" type="audio/ogg" />
+                </audio>
+            </React.Fragment>,
     },
     {
         type: "aud",
@@ -603,10 +641,24 @@ const deviceArray = [
         name: "Pedal",
         blurb: "Pedal is a guitar distortion effect. In combination with Live’s Tuner, Amp, and Cabinet effects, Pedal is great for processing guitar sounds. Pedal can also be used in less conventional settings, such as a standalone effect on vocals, synths or drums.",
         imageArray: ["images/pedal.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        relatedDevices: ["overdrive", "echo", "redux"],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-28-pedal",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VUZVSNDLQ1s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    This is it. This is the best device in ableton. Put it on everything. Put in on vocals, I don't care. Put it on leads, put it on drums, pads, white noise, whatever. I'm addicted to distortion.
+                </p>
+            </React.Fragment>,
+        asideContent:
+            <React.Fragment>
+                <p>
+                    Here's a little excerpt from my Suit Dummies album. Everything has pedal on it.
+                </p>
+                <audio controls className="audio">
+                    <source src="/audio/pedal.ogg" type="audio/ogg" />
+                </audio>
+            </React.Fragment>,
     },
     {
         type: "aud",
@@ -614,10 +666,25 @@ const deviceArray = [
         name: "Phaser",
         blurb: "Phaser uses a series of all-pass filters to create a phase shift in the frequency spectrum of a sound.",
         imageArray: ["images/phaser.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        relatedDevices: ["chorus", "flanger", "overdrive"],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-29-phaser",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gEk6Y0KSflo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    Ableton's Phaser is part of 3 classic studio modulation effects - Chorus, Flanger and of course the Phaser. It's a collection of All-Pass filters that can add movement and funk to the sound. Check out the video for a complete overview of this useful effect.
+                </p>
+
+            </React.Fragment>,
+        asideContent:
+            <React.Fragment>
+                <p>
+                    Here's a guitar loop, clean once and then phasered.
+                </p>
+                <audio controls className="audio">
+                    <source src="/audio/phaser.ogg" type="audio/ogg" />
+                </audio>
+            </React.Fragment>,
     },
     {
         type: "aud",
@@ -625,10 +692,24 @@ const deviceArray = [
         name: "Redux",
         blurb: "Nostalgic for the famed low-resolution sound quality of the Ensoniq Mirage, Fairlight CMI or Commodore-64 computer? Redux returns us to the Dark Ages of digital by reducing a signal’s sample rate and bit resolution.",
         imageArray: ["images/redux.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
+        relatedDevices: ["overdrive", "overdrive", "saturator"],
         manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FfGz7FId0uA" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    This one's dangerous, folks.
+                </p>
+            </React.Fragment>,
+        asideContent:
+            <React.Fragment>
+                <p>
+                    The devil's distortion. I like using the bit crushing effect, it's very extreme.
+                </p>
+                <audio controls className="audio">
+                    <source src="/audio/redux.ogg" type="audio/ogg" />
+                </audio>
+            </React.Fragment>,
     },
     {
         type: "aud",
@@ -636,10 +717,22 @@ const deviceArray = [
         name: "Resonators",
         blurb: "This device consists of five parallel resonators that superimpose a tonal character on the input source. It can produce sounds resembling anything from plucked strings to vocoder-like effects. The resonators are tuned in semitones, providing a musical way of adjusting them. The first resonator defines the root pitch and the four others are tuned relative to this pitch in musical intervals.",
         imageArray: ["images/resonators.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        relatedDevices: ["auto-filter", "corpus",],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-30-redux",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/trXFvPv1Fhw" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    Resonators can superimpose a pitch on any sound. There are 5 different resonators to allow you to create chords (harmony) from anything! Check out the end of the video where you'll see how to map the Resonators main pitch knob melodically to a MIDI controller.
+                </p>
+            </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            <p> Here, I've turned a drum loop into a rhythmic chord generator. </p>
+                <audio controls className="audio">
+                    <source src="/audio/resonators.ogg" type="audio/ogg" />
+                </audio>
+        </React.Fragment>,
     },
     {
         type: "aud",
@@ -647,10 +740,24 @@ const deviceArray = [
         name: "Reverb",
         blurb: "The input signal passes first through high and low cut filters, whose X-Y controller allows changing the band’s center frequency (X-axis) and bandwidth (Y-axis). Either filter may be switched off when not needed to save CPU power.",
         imageArray: ["images/reverb.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        relatedDevices: ["delay", "echo",],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-32-reverb",
+        mainContent:
+            <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XXvTYZt9D_4" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+                <p>
+                    Reverb is maybe one of the only stock Live effects that I find lacking. I usually turn to VSTs . That being said, the Live reverb unit is fairly deep, and if you're willing to spend some time with it, you can get great results. 
+                </p>
+            </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            <p>
+                Here, I've taken the keys out of your face with a huge, warm reverb in the second phrase.
+            </p>
+                <audio controls className="audio">
+                    <source src="/audio/reverb.ogg" type="audio/ogg" />
+                </audio>
+        </React.Fragment>,
     },
     {
         type: "aud",
@@ -659,9 +766,15 @@ const deviceArray = [
         blurb: "Saturator is a waveshaping effect that can add that missing dirt, punch or warmth to your sound. It can coat input signals with a soft saturation or drive them into many different flavors of distortion.",
         imageArray: ["images/saturator.png"],
         relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-33-saturator",
+        mainContent: 
+        <React.Fragment>
+
+        </React.Fragment>,
+        asideContent:
+            <React.Fragment>
+
+            </React.Fragment>,
     },
     {
         type: "aud",
@@ -669,10 +782,19 @@ const deviceArray = [
         name: "Spectrum",
         blurb: "Spectrum performs realtime frequency analysis of incoming audio signals. The results are represented in a graph, with dB along the vertical axis and frequency/pitch along the horizontal. The peak levels are retained on the graph until the song is restarted. Note that Spectrum is not an audio effect, but rather a measurement tool — it does not alter the incoming signal in any way.",
         imageArray: ["images/spectrum.png"],
-        relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        relatedDevices: ["eq-eight", "tuner", "limiter"],
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-34-spectrum",
+        mainContent: 
+        <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VE9vC9zGAfU" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+            <p>
+                    Specturm doesn't make any sound. It's a Spectrum Analyzer. It shows you the Frequency response of your sounds, helping mix or master your tracks. It can even show you what notes the sound is playing if the Tuner isn't for you.
+            </p>
+        </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
     },
     {
         type: "aud",
@@ -681,9 +803,15 @@ const deviceArray = [
         blurb: "Tuner analyzes and displays the incoming monophonic pitch as well as its distance from the nearest semitone. Based on classic guitar tuners, Tuner’s large display is designed for easy visibility on stage, and is perfect for tuning external instruments or synthesizers. Note that Tuner is not an audio effect, but rather a measurement tool — it does not alter the incoming signal in any way.",
         imageArray: ["images/tuner.png"],
         relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-35-tuner",
+        mainContent: 
+        <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/3kSODbF5Uy4" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+        </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
     },
     {
         type: "aud",
@@ -692,9 +820,15 @@ const deviceArray = [
         blurb: "Utility can perform some very useful tasks, especially in combination with other devices.",
         imageArray: ["images/utility.png"],
         relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-36-utility",
+        mainContent: 
+        <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9z4KwJ2b6U0" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+        </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
     },
     {
         type: "aud",
@@ -703,9 +837,15 @@ const deviceArray = [
         blurb: "The Vinyl Distortion effect emulates some of the typical distortions that occur on vinyl records during playback. These distortions are caused by the geometric relationships between the needle and the recorded groove. The effect also features a crackle generator for adding noisy artifacts.",
         imageArray: ["images/vinyl-distortion.png"],
         relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        manualUrl: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-37-vinyl-distortion",
+        mainContent: 
+        <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rnUTd7HIly8" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+        </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
     },
     {
         type: "aud",
@@ -714,9 +854,15 @@ const deviceArray = [
         blurb: "A vocoder is an effect that combines the frequency information of one audio signal (called the carrier) with the amplitude contour of another audio signal (called the modulator). The modulator source is generally something with a clear rhythmic character such as speech or drums, while the carrier is typically a harmonically-rich synthesizer sound such as a string or pad. The most familiar application of a vocoder is to create ”talking synthesizer” or robotic voice effects.",
         imageArray: ["images/vocoder.png"],
         relatedDevices: ["eq-eight", "eq-three", "auto-pan"],
-        manualUrl: "",
-        mainContent: "",
-        asideContent: "",
+        manualUrl: 
+        <React.Fragment>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JHxuLGyufGo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen name="iframe" title="iframe"></iframe>
+        </React.Fragment>,
+        mainContent: "https://www.ableton.com/en/manual/live-audio-effect-reference/#22-38-vocoder",
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
     },
     {
         type: "ins",
@@ -726,8 +872,14 @@ const deviceArray = [
         imageArray: ["images/analog.png"],
         relatedDevices: ["pedal", "chorus", "saturator"],
         manualUrl: "https://www.ableton.com/en/manual/live-instrument-reference/#24-1-analog",
-        mainContent: "",
-        asideContent: ""
+        mainContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>
     },
     {
         type: "ins",
@@ -737,8 +889,14 @@ const deviceArray = [
         imageArray: ["images/collision.png"],
         relatedDevices: ["pedal", "chorus", "saturator"],
         manualUrl: "https://www.ableton.com/en/manual/live-instrument-reference/#24-2-collision",
-        mainContent: "",
-        asideContent: ""
+        mainContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>
     },
     {
         type: "ins",
@@ -748,8 +906,14 @@ const deviceArray = [
         imageArray: ["images/electric.png"],
         relatedDevices: ["pedal", "chorus", "saturator"],
         manualUrl: "https://www.ableton.com/en/manual/live-instrument-reference/#24-3-electric",
-        mainContent: "",
-        asideContent: ""
+        mainContent: 
+        <React.Fragment>
+            
+        </React.Fragment>,
+        asideContent: 
+        <React.Fragment>
+            
+        </React.Fragment>
     },
 
 ]
